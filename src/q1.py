@@ -16,4 +16,11 @@ def is_palindrome(s: str) -> bool:
     Returns:
         bool: True if the string is a palindrome, False otherwise.
     """
-    return True
+    s_lower = s.lower()
+    return s_lower == s_lower[::-1]
+
+# Test cases
+assert is_palindrome("racecar") == True
+assert is_palindrome("a") == True
+assert is_palindrome("change") == False
+    
